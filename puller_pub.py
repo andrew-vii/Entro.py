@@ -79,7 +79,7 @@ while 1:
 	t = time.localtime()
 	#timestamp = time.strftime('%b-%d-%Y_%H%M', t)
 	timestamp = int(time.time())
-	filename = '/dir/path/here/Entropy/pullcapfiles/PULLCAP_%s.txt' %timestamp #Place the directory location of the PULLCAP dir here
+	filename = 'pullcapfiles/PULLCAP_%s.txt' %timestamp #Place the directory location of the PULLCAP dir here
 	f = open(filename,'w')
 	enc = reqpull.text
 	cne = enc.encode('utf-8') #This is explicit encoding for utf, gets rid of a nasty ascii encoding error thrown by weird characters in the response text
