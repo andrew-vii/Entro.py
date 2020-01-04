@@ -24,10 +24,9 @@ xvals=[]
 yvals=[]
 
 #Pull LATs from uid.txt as x-value, assign 1 to y value if LAT = 1, assign 0 otherwise
-
 #WIP   - Need to have it check for the LAT =1. If it equals 1, set y value to 1 and x value to timestamp of pullcap file
-							#If it equals more than 1, set y value to 0 and x value to timestamp of pullcap file   
-							#We can add a second data point if LAT > 1, set y value to 1 and x value to LAT timestamp
+#If it equals more than 1, set y value to 0 and x value to timestamp of pullcap file   
+#We can add a second data point if LAT > 1, set y value to 1 and x value to LAT timestamp
 a = open('/dir/path/Entropy/uidfiles/%s.txt'%uid,'r') #Uidfiles dirpath here
 for i in a:
 	match = re.findall(('\d+'), i)	
@@ -48,7 +47,6 @@ for i in a:
 conxvals=[]
 #Unix timestamp to DTG conversion
 for z in xvals:
-		
 	dt = (datetime.fromtimestamp(z)).strftime('%Y-%m-%d %H:%M:%S') #unix_ts is the LAT data 
 	conxvals.append(dt)
 
