@@ -18,7 +18,6 @@ newseq = 0
 seqcount = 1
 
 while 1:
-
 	headers = {
     	'origin': 'https://www.facebook.com',
     	'accept-encoding': 'gzip, deflate, br',
@@ -62,7 +61,6 @@ while 1:
 		print("Incorrect sequence number")
 		#newseq = re.findall(r'\d+', reqpull.text)
 		#print("%s is new seq num" %newseq[0])
-	
 		#Re-send request with corrected seq number set back to 0
 		parlst = list(params)
 		parlst[1] = ('seq',0)
@@ -70,11 +68,7 @@ while 1:
 		#Sending new pull request
 		print("Sending new pull request...")
 		reqpull = requests.get('https://4-edge-chat.facebook.com/pull', headers=headers, params=params)
-	
-
 		
-	#WIP - Error checking for "heartbeat" request replies
-
 	#Send pull request output to file
 	t = time.localtime()
 	#timestamp = time.strftime('%b-%d-%Y_%H%M', t)
@@ -86,15 +80,8 @@ while 1:
 	f.write(cne)
 	f.close()
 	
-	
 	#Time to sleep in between pull requests. Program seems to return errors if running with an interval less than 50 seconds. 
 	#Recommend at least 5 minute intervals to avoid getting errors from Facebook
 	time.sleep(300)
 	pullcount +=1
-	
-	
-	
-	
-	
-
 	
