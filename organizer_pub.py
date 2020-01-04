@@ -8,12 +8,10 @@ import time
 from datetime import datetime
 import re
 
-
 print "\n\nWelcome to Entro.py -- The Facebook OSINT Collection Tool"
 print "Version 0.4"
 print "\nUse CTRL-C to abort"
 print "---------------------------------------------------------\n\n\n"
-
 
 #Get count of files in pullcap directory, used for program completion status
 filecount = len([name for name in os.listdir("pullcapfiles/")]) #Put directory location of pullcap directory here
@@ -69,10 +67,6 @@ with open('pullcaplist.txt','r') as b: #Location of pullcaplist file here
 			g = open('uidfiles/%s.txt' %foruid,"a") #Creates uid.txt file for each unique UID, uidfiles dirpath here
 			g.writelines("%s:%s::%s:%s\n" % (forlat,k,pval,vcval) ) #Writes LAT and pullcap timestamp to corresponding UID file
 			g.close()
-									 
-									
-			
+									 			
 print("\n\n")
-	
-	
 	
