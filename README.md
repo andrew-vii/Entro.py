@@ -1,8 +1,7 @@
 # Entro.py
 Facebook OSINT Collection and Analysis Tool
 
-
-[https://andrew-vii.github.io/entropy/](Website writeup)
+[Website Writeup](https://andrew-vii.github.io/entropy/)
 
 
 Entro.py is a weekend project I made over a bet with a friend. It's designed to scrape Facebook chat statuses for active/last active time status, then output them to a (very basic) graph for an individual UID, resulting in a very accurate activity graph for a given user. Because Facebook leaks the last-active status for its chat users, you can get a fairly active picture of when someone is awake/asleep/at work, if they check Facebook at least a few times a day. 
