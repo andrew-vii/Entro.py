@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 #Main entro.py program, makes requests to Facebook for friendlist chat activity data
 
@@ -8,14 +8,16 @@ import time
 from datetime import datetime
 import re
 
-print "\n\nWelcome to Entro.py -- The Facebook OSINT Collection Tool"
-print "Version 0.4"
-print "\nUse CTRL-C to abort"
-print "---------------------------------------------------------\n\n\n"
+print("\n\nWelcome to Entro.py -- The Facebook OSINT Collection Tool")
+print("Version 0.4")
+print("\nUse CTRL-C to abort")
+print("---------------------------------------------------------\n\n\n")
 
 pullcount = 0
 newseq = 0
 seqcount = 1
+os.mkdir("pullcapfiles")
+
 
 while 1:
 	headers = {
@@ -41,7 +43,7 @@ while 1:
     	('pws', 'fresh'),
     	('isq', '66576'),
     	('msgs_recv', '0'),
-    	('uid', '666666666') #Insert your Facebook UID here
+    	('uid', '666666666'), #Insert your Facebook UID here
     	('viewer_uid', '66666666666'), #Insert your Facebook UID here
     	('sticky_token', '1003'),
     	('sticky_pool', 'ash4c09_chat-proxy'),
